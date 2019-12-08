@@ -3,7 +3,7 @@
     text-align: center;
   }
   img{
-    opacity: 0.9;
+    opacity: 0.85;
   }
   .Welcome {
     position: absolute;
@@ -13,8 +13,8 @@
     transform: translate(-50%, -50%);
   }
 .Welcome p{
-    font-size: 40px;
-    color: yellowgreen;
+    font-size: 45px;
+    color: rgb(169, 247, 14);
 }
 
 .Welcome form{
