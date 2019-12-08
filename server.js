@@ -11,7 +11,6 @@ var unirest = require('unirest')
 const hotelsUrl= "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyCFCDqcWZryyPAnPa8h_cJVAWemz-kOhYo&query="
 
 app.use(express.static(path.join(__dirname, 'dist', 'TravelPlanner')))
-app.get('/api/hello', (req, res) => res.send('Hello World!'))
 
 app.get('/hotel/:uid', (req, res) =>{
     const locat = req.params.uid

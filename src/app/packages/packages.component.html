@@ -1,1 +1,21 @@
-<p>packages works!</p>
+<div class="packagePage" >
+        <form class="searchPackage" action="package" (ngSubmit)="searchNow()">
+            <label>From</label>
+            <input type="text" placeholder="Entery a city" name="address" [(ngModel)]=depature>
+            <label>To</label>
+            <input type="text" placeholder="Entery a city" name="address" [(ngModel)]=destination>
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <input type="submit" value="submit" routerLink="/package/{{depature}}&{{destination}}">
+        </form>
+        <hr style="border-top: 1px solid tomato">
+        <div *ngFor="let package of packages">
+            <div class="row">
+              <div class="packageInfo">
+                  <h2>{{package.name}}</h2>
+                  <p>{{package.formatted_address}}</p>
+                  <p>Rate:{{package.rating}}</p>
+              </div>
+            </div>
+          </div>
+      </div>

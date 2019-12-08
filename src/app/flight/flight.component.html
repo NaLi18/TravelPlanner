@@ -1,20 +1,18 @@
-<div class="hotelPage" >
-        <form class="searchHotel" action="hotel" (ngSubmit)="searchNow()">
+<div class="flightPage" >
+        <form class="searchFlight" action="flight" (ngSubmit)="searchNow()">
             <label>From</label>
             <input type="text" placeholder="Entery a city" name="address" [(ngModel)]=depature>
             <label>To</label>
             <input type="text" placeholder="Entery a city" name="address" [(ngModel)]=destination>
             <input type="date" id="startDate">
             <input type="date" id="endDate">
-            <input type="submit" value="submit" routerLink="/hotel/{{depature}}&{{destination}}">
+            <input type="submit" value="submit" routerLink="/flight/{{depature}}&{{destination}}">
         </form>
         <hr style="border-top: 1px solid tomato">
         <div *ngFor="let flight of flights">
             <div class="row">
-              <div class="hotelInfo">
+              <div class="flightInfo">
                   <h2>{{flight.name}}</h2>
-                  <p>{{flight.formatted_address}}</p>
-                  <p>Rate:{{flight.rating}}</p>
               </div>
             </div>
           </div>
