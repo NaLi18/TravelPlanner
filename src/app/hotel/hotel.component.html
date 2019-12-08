@@ -1,1 +1,19 @@
-<p>hotel works!</p>
+<div class="hotelPage" >
+  <form class="searchHotel" action="hotel" (ngSubmit)="searchNow()">
+    <input type="text" placeholder="Entery a city" name="address" [(ngModel)]=someThing>
+    <input type="date" id="startDate">
+    <input type="date" id="endDate">
+    <input type="submit" value="submit" routerLink="/hotel/{{someThing}}">
+  </form>
+  <hr style="border-top: 1px solid tomato">
+  <div *ngFor="let hotel of hotels">
+      <div class="row">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?&maxheight=600&maxwidth=600&photoreference={{hotel.photos[0].photo_reference}}&key=AIzaSyCFCDqcWZryyPAnPa8h_cJVAWemz-kOhYo"> 
+        <div class="hotelInfo">
+            <h2>{{hotel.name}}</h2>
+            <p>{{hotel.formatted_address}}</p>
+            <p>Rate:{{hotel.rating}}</p>
+        </div>
+      </div>
+    </div>
+</div>

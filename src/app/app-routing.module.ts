@@ -11,6 +11,7 @@ const routes: Routes = [
   {path:'customers', component: CustomerComponent},
   {path:'', component: HomeComponent},
   {path: 'packages', component:PackagesComponent},
+  {path:'hotel/:id',component:HotelComponent},
   {path: 'hotel', component:HotelComponent},
   {path:'flight', component:FlightComponent}
 ];

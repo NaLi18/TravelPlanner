@@ -7,22 +7,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
 import { PackagesComponent } from './packages/packages.component';
-import { HotelComponent } from './hotel/hotel.component';
 import { FlightComponent } from './flight/flight.component';
-
+import {FormsModule } from '@angular/forms'
+import { HotelComponent } from './hotel/hotel.component';
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
     HomeComponent,
     PackagesComponent,
-    HotelComponent,
-    FlightComponent
+    FlightComponent,
+    HotelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
